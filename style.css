@@ -1,0 +1,74 @@
+/* @font-face를 사용하여 폰트 정의 */
+@font-face {
+  font-family: 'S-CoreDream-3Bold';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Bold.woff') format('woff');
+  font-weight: bolder;
+  font-style: normal;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 육각형 스타일링 */
+.logo-path-polygon {
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  background-color: red;
+  clip-path: polygon(30% 0, 100% 0, 100% 70%, 70% 100%, 0 100%, 0 30%);
+}
+
+/* mainText 글꼴*/
+.mainText, .mainText2 {
+  font-family: 'S-CoreDream-3Bold';
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mainText { 
+  color: black;
+  font-size: 90px;
+  font-weight: 600;
+}
+
+.mainText2 {
+  color: black;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+.logo {
+  width: 500px;
+  position: relative;
+  margin: 50px auto;
+  text-align: center;
+  color: white;
+  border-radius: 5px;
+}
+
+#joinParty, #leftWing {
+  position: fixed;
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+#joinParty {
+  margin-top: 900px;
+  background-color: #E61E2B;
+}
+
+#leftWing {
+  margin-top: 1000px;
+  background-color: #004EA2;
+}
