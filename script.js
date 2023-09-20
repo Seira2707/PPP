@@ -1,3 +1,13 @@
+const joinPartyButton = document.getElementById("joinParty");
+
+joinPartyButton.addEventListener('click', () => {
+    if (count >= 10) {
+        window.location.href = 'angryyoon.html';
+    } else {
+        window.location.href = 'yoonpage.html';
+    }
+});
+
 const button = document.getElementById("leftWing");
 let count = 0;
 
