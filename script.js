@@ -1,4 +1,8 @@
 const joinPartyButton = document.getElementById("joinParty");
+const button = document.getElementById("leftWing");
+
+// localStorage에서 count 값을 가져옴
+let count = parseInt(localStorage.getItem("count")) || 0;
 
 joinPartyButton.addEventListener('click', () => {
     if (count >= 10) {
@@ -7,9 +11,6 @@ joinPartyButton.addEventListener('click', () => {
         window.location.href = 'yoonpage.html';
     }
 });
-
-const button = document.getElementById("leftWing");
-let count = 0;
 
 button.addEventListener('mouseenter', () => {
     // 버튼을 랜덤한 위치로 이동
@@ -24,6 +25,9 @@ button.addEventListener('mouseenter', () => {
 
     // count 변수를 증가시킴
     count++;
+
+    // count 값을 localStorage에 저장
+    localStorage.setItem("counts", count);
 
     console.log(`횟수: ${count}`);
 });

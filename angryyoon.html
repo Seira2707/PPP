@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Angry Yoon Page</title>
 </head>
 <body>
-    <h1>AngryYoon</h1>
+    <h1>Angry Yoon Page</h1>
+    <div id="countDisplay">Count: </div>
+
+    <script>
+        // localStorage에서 count 값을 가져옴
+        const storedCount = localStorage.getItem("counts");
+
+        // countDisplay 엘리먼트를 찾고 가져온 count 값을 출력 (null인 경우 0으로 처리)
+        const countDisplay = document.getElementById("countDisplay");
+
+        if (storedCount !== null) {
+            countDisplay.innerHTML += storedCount;
+        } else {
+            countDisplay.innerHTML += "0";
+        }
+    </script>
 </body>
 </html>
